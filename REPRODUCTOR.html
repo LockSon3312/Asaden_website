@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/REPRODUCTOR.CSS">
+</head>
+<body>
+
+    <div class="cuadrado" style="--i:0"></div>
+    <div class="cuadrado" style="--i:1"></div>
+    <div class="cuadrado" style="--i:2"></div>
+    <div class="container">
+        <div class="img-container">
+            <img src="img/natural/kick.jpg" alt="">
+        </div>
+        <h2 id="titulo">Kick Back</h2>
+        <h3 id="Artista">Kenshin Yonezu</h3>
+        <audio src="music/Natural imd.mp3"></audio>
+
+        <div class="progresbar" id="progresbar">
+            <div class="progress" id="progress"></div>
+            <div class="duracion">
+                <span id="TiempoActual">0:00</span>
+                <span id="TiempoDuracion">3:09</span>
+            </div>
+        </div>
+        <div class="controles">
+            <ion-icon name="play-back" id="prev"></ion-icon>
+            <ion-icon name="play" id="play"></ion-icon>
+            <ion-icon name="play-forward" id="next"></ion-icon>
+        </div>
+    </div>
+
+
+
+<!-- scrip de los iconos-->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<!-- scrips .js-->
+<script src="js/reproductor.js"></script>
+</body>
+</html>

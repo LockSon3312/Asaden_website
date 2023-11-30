@@ -1,0 +1,167 @@
+/* importacion del google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* body*/
+body{
+    margin: 0;
+    min-height: 100vh;
+    background: #c9ced3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(249deg, #12c2e9 ,#c471ed, #f64f59 );
+    background-size: 600%, 600%;
+    animation: animateBackground 30s ease infinite;
+}
+    @keyframes animateBackground {
+        0%{
+            background-position: 0% 67%;
+        }
+        50%{
+            background-position: 100% 34%;
+        }
+        100%{
+            background-position: 0% 67%;
+        }
+            
+    }
+
+/* container*/
+
+.container{
+    height: 550px;
+    width: 450px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgb(0, 0, 0, 0.37);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgb(255, 255, 255. 0.18);
+    padding: 20px;
+}
+
+.container .img-container{
+    width: 270px;
+    height: 270px;
+    position: relative;
+    top: -50px;
+    left: 75px;
+}
+
+.container .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.3);
+}
+
+.container h2{
+    font-size: 25px;
+    margin: 0;
+    text-align: center;
+}
+
+.container h3{
+    font-size: 20px;
+    text-align: center;
+    font-weight: 400;
+    margin: 5px 0 0;
+}
+
+/* Barra de progreso*/
+
+.container .progresbar{
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 40px 20px;
+    width: 90%;
+    height: 4px;
+}
+
+.container .progresbar .progress{
+    background: #242323;
+    border-radius: 5px;
+    width: 0%;
+    height: 100%;
+    transition: width 0.1s linear;
+}
+
+.container .progresbar .duracion{
+    position: relative;
+    top: -25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Controles */
+
+.container .controles{
+    position: relative;
+    top: -15px;
+    left: 95px;
+    width: 300px;
+}
+
+.container .controles ion-icon{
+    font-size: 30px;
+    color: #010101;
+    margin-right: 60px;
+    cursor: pointer;
+    user-select: none;
+}
+/* Animaciones*/
+
+.cuadrado{
+    position: absolute;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgb(255, 255, 255. 0.18);
+    animation: animacion 5s linear infinite;
+    animation-delay: calc(1s * var(--i));
+}
+
+.cuadrado:nth-child(1){
+    width: 90px;
+    height: 150px;
+    top: 300px;
+    left: 690px;
+    z-index: 1;
+}
+
+.cuadrado:nth-child(2){
+    width: 150px;
+    height: 80px;
+    bottom:  400px;
+    right: 630px;
+    z-index: 1;
+}
+
+.cuadrado:nth-child(3){
+    width: 150px;
+    height: 150px;
+    bottom:  120px;
+    right: 50%;
+    z-index: -1;
+}
+
+@keyframes animacion{
+    0%{
+        transform: translateY( -20px);
+    }
+    50% {
+        transform: translateY( 20px);
+    }
+    100% {
+        transform: translateY( -20px);
+    }
+    
+}
